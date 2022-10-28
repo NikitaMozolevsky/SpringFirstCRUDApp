@@ -21,81 +21,112 @@
 
     <spring.version>5.3.23</spring.version>
     <encoding.type>UTF-8</encoding.type>
+    <junit.jupiter.version>5.9.0</junit.jupiter.version>
+    <junit.platform.version>1.9.0</junit.platform.version>
 
     <project.build.sourceEncoding>${encoding.type}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${encoding.type</project.reporting.outputEncoding>
     <file.encoding>${encoding.type}</file.encoding>
   </properties>
 
+
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-suite</artifactId>
+      <version>${junit.platform.version}</version>
+      <scope>test</scope>
+    </dependency>
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>4.0.1</version>
       <scope>provided</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>${spring.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>${spring.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
       <version>${spring.version}</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.thymeleaf</groupId>
       <artifactId>thymeleaf-spring5</artifactId>
       <version>3.0.15.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons -->
+
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-commons</artifactId>
       <version>2.7.5</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+
     <dependency>
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator</artifactId>
-      <version>6.1.6.Final</version>
+      <version>6.1.6.Final</version> <!--8.0.0.Final - Bullshit-->
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>42.5.0</version>
     </dependency>
 
-
-
-
   </dependencies>
 
   <build>
     <finalName>spring_audiolessons_18_10_webapp</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (maybe moved to parent pom) -->
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>

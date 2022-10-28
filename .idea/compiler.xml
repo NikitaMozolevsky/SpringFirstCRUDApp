@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springAudiolessons_18_10_Webapp" />
+        <module name="springAudiolessons_28_10" />
         <module name="springAudiolessons_18_10_3_Webapp" />
       </profile>
     </annotationProcessing>
